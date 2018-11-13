@@ -1,2 +1,3 @@
-# blog-archive
-Archived articles from Medium
+# Archive
+
+This repository contains archived articles from my old Medium blog.
