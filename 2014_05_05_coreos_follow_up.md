@@ -9,11 +9,11 @@ The complete source code for this article is [here](https://github.com/marceldeg
 
 So, what are Logstash, Elasticsearch, and Kibana? Just like last time, let me give you a quick introduction:
 
-* [**Logstash](http://logstash.net/)** is a tool for managing events and logs. Logstash acts as a central place to send all logging and events, and comes with a wide range of so-called “outputs” to store or process these events.
+* [**Logstash**](http://logstash.net/) is a tool for managing events and logs. Logstash acts as a central place to send all logging and events, and comes with a wide range of so-called “outputs” to store or process these events.
 
-* [**Elasticsearch](http://www.elasticsearch.org/)** is a highly-available, scalable, data storage and search platform. It’s a document store with powerful search functions built in. We use it at Wakoopa to store, process, and analyze the logging events of all our applications. We currently store about 10GB of log data per day in Elasticsearch.
+* [**Elasticsearch**](http://www.elasticsearch.org/) is a highly-available, scalable, data storage and search platform. It’s a document store with powerful search functions built in. We use it at Wakoopa to store, process, and analyze the logging events of all our applications. We currently store about 10GB of log data per day in Elasticsearch.
 
-* [**Kibana](http://www.elasticsearch.org/overview/kibana)** is a visualization tool built for Logstash data stored in Elasticsearch. It allows you to easily analyze, compare, and filter your log data and is an invaluable tool when troubleshooting issues in large-scale applications.
+* [**Kibana**](http://www.elasticsearch.org/overview/kibana) is a visualization tool built for Logstash data stored in Elasticsearch. It allows you to easily analyze, compare, and filter your log data and is an invaluable tool when troubleshooting issues in large-scale applications.
 
 The goal for this article is to hook up these three technologies to the Nginx/Sinatra stack we built in the previous article. The idea is to let each Sinatra container ship off its log files to the central Logstash agent with logstash-forwarder. The Logstash agent will store the events in Elasticsearch and the Kibana plugin (on the Elasticsearch server) will allow us to analyze the data.
 
